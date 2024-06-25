@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="gameScore">Score: <span>0</span> </div>
+            <div class="winMessage">Level Completed!</div>
+            <div class="lossMessage">Level Failed!</div>
+        </div>
+        <div id="game">
+            <select id="levelSelector" onchange="levelChange()">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+                <option value="6">Level 6</option>
+                <option value="7">Level 7</option>
+                <option value="8">Level 8</option>
+                <option value="9">Level 9</option>
+                <option value="10">Level 10</option>
+            </select>
+            <br />
+            <canvas id="canvas" width="750" height="400" style="border: 1px solid #000"></canvas>
+            <div id="consoleHistory"></div>
+            <div id="console">
+                <textarea id="command" rows="4" cols="50" placeholder="Type help(); to display list of commands"></textarea> <br />
+                <button id="submitBtn" onclick="handleSubmit()">Submit</button>
+                <button onclick="levelChange()">Reset Level</button>
+            </div>
+        </div>
+  
+        <div id="highScore"></div>
+
+        <audio controls autoplay loop>
+            <source src="./sound/professors dilemma.mp3" type="audio/mpeg">
+        </audio>
+
+        <script src="js/levels.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/move.js"></script>
+    </body>
+</html>
